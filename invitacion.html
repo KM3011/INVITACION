@@ -126,6 +126,14 @@
             transform: rotate(-2deg);
         }
 
+        .highlight-green {
+            font-weight: bold;
+            color: #32CD32;
+            display: inline-block;
+            transform: rotate(2deg);
+            text-shadow: 1px 1px 2px rgba(0,100,0,0.2);
+        }
+
         .btn-glamour {
             display: inline-block;
             background: linear-gradient(45deg, #FF6B9E, #D23369);
@@ -164,7 +172,7 @@
         .avocado1 {
             width: 120px;
             height: 120px;
-            background-image: url('https://i.imgur.com/JQ9pYdD.png');
+            background-image: url('https://img.freepik.com/vector-premium/lindo-ejercicio-aguacate-corriendo-cinta-correr-ilustracion-dibujada-mano-dibujos-animados_204997-87.jpg?w=1800');
             bottom: 10%;
             left: 5%;
             animation-delay: 0.5s;
@@ -173,7 +181,7 @@
         .avocado2 {
             width: 150px;
             height: 150px;
-            background-image: url('https://i.imgur.com/JQ9pYdD.png');
+            background-image: url('https://i.pinimg.com/originals/60/64/9a/60649a9346bcdd82652dd3ca625559e8.gif');
             top: 20%;
             right: 8%;
             animation-delay: 1s;
@@ -182,7 +190,7 @@
         .avocado3 {
             width: 100px;
             height: 100px;
-            background-image: url('https://i.imgur.com/JQ9pYdD.png');
+            background-image: url('https://play-lh.googleusercontent.com/nU4saOrN2Q5pcCcosVGf4e__wl-lpOBOU5F6xehqPWcQRWJqfqZ5Nh6Zo-zJLky5IEw');
             top: 60%;
             right: 15%;
             animation-delay: 1.5s;
@@ -221,39 +229,30 @@
             filter: drop-shadow(0 0 5px rgba(255,107,158,0.5));
         }
 
-        /* Controles de música */
-        .music-controls {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 10px 15px;
-            border-radius: 50px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        /* Puchaina especial */
+        .puchaina-special {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background-image: url('https://album.mediaset.es/eimg/2024/04/08/imagen-de-la-leyenda-de-la-puchaina-creada-por-megamedia_2cd6.jpg?w=320');
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 6;
+            animation: float 7s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(50, 205, 50, 0.8));
+            top: 10%;
+            left: 10%;
         }
 
-        .music-btn {
-            background: #FF6B9E;
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-
-        .music-btn:hover {
-            transform: scale(1.1);
-            background: #D23369;
+        /* Potaxie elements */
+        .potaxie {
+            position: absolute;
+            font-family: 'Pacifico', cursive;
+            color: #32CD32;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+            font-size: 1.5rem;
+            z-index: 4;
+            animation: float 5s ease-in-out infinite;
         }
 
         /* Responsive */
@@ -266,69 +265,69 @@
             .avocado1 { width: 80px; height: 80px; }
             .avocado2 { width: 100px; height: 100px; }
             .avocado3 { width: 70px; height: 70px; }
-            .music-controls {
-                bottom: 10px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
+            .puchaina-special { width: 120px; height: 120px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>¡Fiesta de Cumpleaños!</h1>
-        <div class="birthday-girl">Iglenis</div>
+        <h1>¡Fiesta Potaxie de Cumpleaños!</h1>
+        <div class="birthday-girl">Iglenis Puchaina</div>
         <h2>Entre Arenas Las Ballenas</h2>
         
         <div class="party-details">
-            <p><span class="highlight">📅 Fecha:</span> 17 de Junio</p>
-            <p><span class="highlight">⏰ Hora:</span> 5:30 PM</p>
+            <p><span class="highlight">📅 Fecha:</span> 17 de Julio - <span class="highlight-green">Día de la Puchaina</span></p>
+            <p><span class="highlight">⏰ Hora:</span> 5:30 PM <span class="highlight-green">(Hora Potaxie)</span></p>
             <p><span class="highlight">📍 Lugar:</span> Entre Arenas - Las Ballenas</p>
-            <p><span class="highlight">👟 Dresscode:</span> Ropa Deportiva Glamurosa</p>
+            <p><span class="highlight">👟 Dresscode:</span> Ropa Deportiva Glamurosa <span class="highlight-green">con toque Puchaina</span></p>
             
             <div class="tennis-icon">🎾</div>
-            <p>Actividad Principal: <span class="highlight">BEACH TENNIS</span></p>
+            <p>Actividad Principal: <span class="highlight-green">BEACH TENNIS POTAXIE</span></p>
+            
+            <p class="highlight-green" style="font-size: 1.1rem; margin-top: 15px;">* Sorprende a la cumpleañera con un detalle especial *</p>
             
             <a href="https://maps.app.goo.gl/FSpbGdkVmHD11G8K9" class="btn-glamour" target="_blank">Ver Ubicación</a>
         </div>
         
-        <p><span class="highlight">🥑 No olvides:</span> Termo, toalla y actitud fashion!</p>
+        <p><span class="highlight">🥑 No olvides:</span> Termo, toalla y <span class="highlight-green">actitud fashion Puchaina!</span></p>
+        <p><span class="highlight-green">✨ Potasio Power:</span> Ven cargado de energía Potaxie para celebrar!</p>
         
-        <button class="btn-glamour" id="confirmBtn">Confirmar Asistencia</button>
+        <button class="btn-glamour" id="confirmBtn">Confirmar Asistencia Potaxie</button>
     </div>
     
-    <!-- Aguacates animados -->
+    <!-- Aguacates animados y Puchaina -->
     <div class="avocado avocado1"></div>
     <div class="avocado avocado2"></div>
     <div class="avocado avocado3"></div>
+    <div class="puchaina-special"></div>
     
-    <!-- Controles de música -->
-    <div class="music-controls">
-        <button class="music-btn" id="playBtn">▶️</button>
-        <button class="music-btn" id="pauseBtn">⏸️</button>
-        <span>Puchaina Correlona</span>
-    </div>
-    
-    <audio id="bgMusic" loop>
+    <audio id="bgMusic" loop autoplay>
         <source src="puchaina_correlona.mp3" type="audio/mpeg">
     </audio>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Música
+            // Música (autoplay)
             const music = document.getElementById('bgMusic');
-            const playBtn = document.getElementById('playBtn');
-            const pauseBtn = document.getElementById('pauseBtn');
             
-            playBtn.addEventListener('click', function() {
-                music.play();
-            });
+            // Intentar reproducir automáticamente (con manejo de errores)
+            function attemptPlay() {
+                const playPromise = music.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Autoplay prevented");
+                    });
+                }
+            }
             
-            pauseBtn.addEventListener('click', function() {
-                music.pause();
-            });
+            // Intentar reproducir cuando el usuario interactúa con la página
+            document.body.addEventListener('click', function firstInteraction() {
+                attemptPlay();
+                document.body.removeEventListener('click', firstInteraction);
+            }, { once: true });
             
-            // Decoraciones
+            // Decoraciones Potaxie
             function createDecorations() {
                 // Sparkles
                 for (let i = 0; i < 40; i++) {
@@ -339,6 +338,7 @@
                     sparkle.style.width = (Math.random() * 10 + 5) + 'px';
                     sparkle.style.height = sparkle.style.width;
                     sparkle.style.animationDelay = Math.random() * 3 + 's';
+                    sparkle.style.backgroundColor = Math.random() > 0.5 ? '#FF6B9E' : '#32CD32';
                     document.body.appendChild(sparkle);
                 }
                 
@@ -353,11 +353,25 @@
                     puchaina.style.animationDelay = Math.random() * 6 + 's';
                     document.body.appendChild(puchaina);
                 }
+                
+                // Elementos Potaxie
+                const potaxieTexts = ['Potaxie!', 'Puchaina!', 'Potasio!', '🥑 Power!', 'Verde que te quiero verde'];
+                for (let i = 0; i < 12; i++) {
+                    const potaxie = document.createElement('div');
+                    potaxie.className = 'potaxie';
+                    potaxie.textContent = potaxieTexts[Math.floor(Math.random() * potaxieTexts.length)];
+                    potaxie.style.left = Math.random() * 100 + 'vw';
+                    potaxie.style.top = Math.random() * 100 + 'vh';
+                    potaxie.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                    potaxie.style.animationDelay = Math.random() * 8 + 's';
+                    potaxie.style.transform = `rotate(${Math.random() * 20 - 10}deg)`;
+                    document.body.appendChild(potaxie);
+                }
             }
             
             // Efecto de confeti al confirmar
             function glitterEffect() {
-                const colors = ['#FF6B9E', '#D23369', '#FFD166', '#06D6A0', '#118AB2'];
+                const colors = ['#FF6B9E', '#D23369', '#FFD166', '#32CD32', '#7CFC00'];
                 const container = document.createElement('div');
                 container.style.position = 'fixed';
                 container.style.top = '0';
@@ -367,7 +381,7 @@
                 container.style.pointerEvents = 'none';
                 container.style.zIndex = '100';
                 
-                for (let i = 0; i < 100; i++) {
+                for (let i = 0; i < 150; i++) {
                     const confetti = document.createElement('div');
                     confetti.style.position = 'absolute';
                     confetti.style.width = (Math.random() * 15 + 5) + 'px';
@@ -378,12 +392,19 @@
                     confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
                     
                     const angle = Math.random() * Math.PI * 2;
-                    const velocity = 5 + Math.random() * 10;
+                    const velocity = 5 + Math.random() * 15;
                     const x = Math.cos(angle) * velocity;
                     const y = Math.sin(angle) * velocity;
                     
                     confetti.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
                     confetti.style.animation = `confettiFall ${1 + Math.random() * 2}s forwards`;
+                    
+                    // Agregar emojis de aguacate aleatoriamente
+                    if (Math.random() > 0.7) {
+                        confetti.textContent = '🥑';
+                        confetti.style.fontSize = '20px';
+                        confetti.style.backgroundColor = 'transparent';
+                    }
                     
                     container.appendChild(confetti);
                 }
@@ -402,11 +423,23 @@
                 
                 // Redirección a WhatsApp
                 setTimeout(() => {
-                    window.open('https://wa.me/584144773141?text=¡Confirmo%20mi%20asistencia%20al%20cumple%20de%20Iglenis!%20🥑🎾', '_blank');
+                    window.open('https://wa.me/584144773141?text=¡Confirmo%20mi%20asistencia%20al%20cumple%20Potaxie%20de%20Iglenis!%20🥑🎾%20Puchaina%20Power!%20Llevaré%20un%20detalle%20especial%20💚', '_blank');
                 }, 500);
             });
             
             createDecorations();
+            
+            // Animación para confeti
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes confettiFall {
+                    to {
+                        transform: translate(-50%, -50%) translate(${Math.random() * 200 - 100}px, ${window.innerHeight + 100}px) rotate(${Math.random() * 360}deg);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
         });
     </script>
 </body>
