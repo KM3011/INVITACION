@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Cumpleaños Fashion de Iglenis!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@800&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo mejorado */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #FFB6C1, #FFD1DC, #FFECF1, #FF9EC8);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #5E2D40;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Animaciones */
+        @keyframes girlyBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+            color: #D23369;
+            text-shadow: 3px 3px 0 rgba(255,255,255,0.7);
+            animation: girlyBounce 2s ease infinite;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            font-family: 'Pacifico', cursive;
+            color: #FF6B9E;
+            text-shadow: 2px 2px 0 rgba(255,255,255,0.6);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .birthday-girl {
+            font-size: 3rem;
+            background: linear-gradient(to right, #FF6B9E, #D23369, #FF8FAB);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            margin: 25px 0;
+            padding: 0 25px;
+            font-family: 'Pacifico', cursive;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+
+        .party-details {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 30px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 15px 35px rgba(210, 51, 105, 0.15);
+            border: 3px solid #FF6B9E;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .party-details::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 3px dashed #FF6B9E;
+            border-radius: 35px;
+            animation: spin 30s linear infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #D23369;
+            display: inline-block;
+            transform: rotate(-2deg);
+        }
+
+        .btn-glamour {
+            display: inline-block;
+            background: linear-gradient(45deg, #FF6B9E, #D23369);
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 25px 10px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(210, 51, 105, 0.3);
+            border: none;
+            cursor: pointer;
+            font-family: 'Pacifico', cursive;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-glamour:hover {
+            transform: scale(1.1) rotate(-3deg);
+            box-shadow: 0 15px 35px rgba(210, 51, 105, 0.4);
+        }
+
+        /* Aguacates animados */
+        .avocado {
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 5;
+            animation: float 5s ease-in-out infinite;
+            filter: drop-shadow(0 0 12px rgba(255,107,158,0.6));
+        }
+
+        .avocado1 {
+            width: 120px;
+            height: 120px;
+            background-image: url('https://i.imgur.com/JQ9pYdD.png');
+            bottom: 10%;
+            left: 5%;
+            animation-delay: 0.5s;
+        }
+
+        .avocado2 {
+            width: 150px;
+            height: 150px;
+            background-image: url('https://i.imgur.com/JQ9pYdD.png');
+            top: 20%;
+            right: 8%;
+            animation-delay: 1s;
+        }
+
+        .avocado3 {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://i.imgur.com/JQ9pYdD.png');
+            top: 60%;
+            right: 15%;
+            animation-delay: 1.5s;
+            border-radius: 50%;
+        }
+
+        /* Decoraciones */
+        .puchaina {
+            position: absolute;
+            font-size: 2.5rem;
+            animation: float 6s ease-in-out infinite;
+            z-index: 3;
+            filter: drop-shadow(0 0 8px rgba(255,215,0,0.7));
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            animation: sparkle 2s infinite;
+            z-index: 4;
+        }
+
+        @keyframes sparkle {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.5); opacity: 0; }
+        }
+
+        .tennis-icon {
+            font-size: 4rem;
+            display: inline-block;
+            margin: 20px 0;
+            filter: drop-shadow(0 0 5px rgba(255,107,158,0.5));
+        }
+
+        /* Controles de música */
+        .music-controls {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .music-btn {
+            background: #FF6B9E;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.1);
+            background: #D23369;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2rem; }
+            .birthday-girl { font-size: 2.2rem; }
+            p { font-size: 1.2rem; }
+            .btn-glamour { font-size: 1.4rem; padding: 15px 35px; }
+            .avocado1 { width: 80px; height: 80px; }
+            .avocado2 { width: 100px; height: 100px; }
+            .avocado3 { width: 70px; height: 70px; }
+            .music-controls {
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Fiesta de Cumpleaños!</h1>
+        <div class="birthday-girl">Iglenis</div>
+        <h2>Entre Arenas Las Ballenas</h2>
+        
+        <div class="party-details">
+            <p><span class="highlight">📅 Fecha:</span> 17 de Junio</p>
+            <p><span class="highlight">⏰ Hora:</span> 5:30 PM</p>
+            <p><span class="highlight">📍 Lugar:</span> Entre Arenas - Las Ballenas</p>
+            <p><span class="highlight">👟 Dresscode:</span> Ropa Deportiva Glamurosa</p>
+            
+            <div class="tennis-icon">🎾</div>
+            <p>Actividad Principal: <span class="highlight">BEACH TENNIS</span></p>
+            
+            <a href="https://maps.app.goo.gl/FSpbGdkVmHD11G8K9" class="btn-glamour" target="_blank">Ver Ubicación</a>
+        </div>
+        
+        <p><span class="highlight">🥑 No olvides:</span> Termo, toalla y actitud fashion!</p>
+        
+        <button class="btn-glamour" id="confirmBtn">Confirmar Asistencia</button>
+    </div>
+    
+    <!-- Aguacates animados -->
+    <div class="avocado avocado1"></div>
+    <div class="avocado avocado2"></div>
+    <div class="avocado avocado3"></div>
+    
+    <!-- Controles de música -->
+    <div class="music-controls">
+        <button class="music-btn" id="playBtn">▶️</button>
+        <button class="music-btn" id="pauseBtn">⏸️</button>
+        <span>Puchaina Correlona</span>
+    </div>
+    
+    <audio id="bgMusic" loop>
+        <source src="puchaina_correlona.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Música
+            const music = document.getElementById('bgMusic');
+            const playBtn = document.getElementById('playBtn');
+            const pauseBtn = document.getElementById('pauseBtn');
+            
+            playBtn.addEventListener('click', function() {
+                music.play();
+            });
+            
+            pauseBtn.addEventListener('click', function() {
+                music.pause();
+            });
+            
+            // Decoraciones
+            function createDecorations() {
+                // Sparkles
+                for (let i = 0; i < 40; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    sparkle.style.left = Math.random() * 100 + 'vw';
+                    sparkle.style.top = Math.random() * 100 + 'vh';
+                    sparkle.style.width = (Math.random() * 10 + 5) + 'px';
+                    sparkle.style.height = sparkle.style.width;
+                    sparkle.style.animationDelay = Math.random() * 3 + 's';
+                    document.body.appendChild(sparkle);
+                }
+                
+                // Puchainas
+                for (let i = 0; i < 8; i++) {
+                    const puchaina = document.createElement('div');
+                    puchaina.className = 'puchaina';
+                    puchaina.textContent = '✨';
+                    puchaina.style.left = Math.random() * 100 + 'vw';
+                    puchaina.style.top = Math.random() * 100 + 'vh';
+                    puchaina.style.fontSize = (Math.random() * 30 + 25) + 'px';
+                    puchaina.style.animationDelay = Math.random() * 6 + 's';
+                    document.body.appendChild(puchaina);
+                }
+            }
+            
+            // Efecto de confeti al confirmar
+            function glitterEffect() {
+                const colors = ['#FF6B9E', '#D23369', '#FFD166', '#06D6A0', '#118AB2'];
+                const container = document.createElement('div');
+                container.style.position = 'fixed';
+                container.style.top = '0';
+                container.style.left = '0';
+                container.style.width = '100%';
+                container.style.height = '100%';
+                container.style.pointerEvents = 'none';
+                container.style.zIndex = '100';
+                
+                for (let i = 0; i < 100; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.style.position = 'absolute';
+                    confetti.style.width = (Math.random() * 15 + 5) + 'px';
+                    confetti.style.height = (Math.random() * 15 + 5) + 'px';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.left = '50%';
+                    confetti.style.top = '40%';
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                    
+                    const angle = Math.random() * Math.PI * 2;
+                    const velocity = 5 + Math.random() * 10;
+                    const x = Math.cos(angle) * velocity;
+                    const y = Math.sin(angle) * velocity;
+                    
+                    confetti.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+                    confetti.style.animation = `confettiFall ${1 + Math.random() * 2}s forwards`;
+                    
+                    container.appendChild(confetti);
+                }
+                
+                document.body.appendChild(container);
+                
+                setTimeout(() => {
+                    container.remove();
+                }, 2000);
+            }
+            
+            // Botón de confirmación
+            const confirmBtn = document.getElementById('confirmBtn');
+            confirmBtn.addEventListener('click', function() {
+                glitterEffect();
+                
+                // Redirección a WhatsApp
+                setTimeout(() => {
+                    window.open('https://wa.me/584144773141?text=¡Confirmo%20mi%20asistencia%20al%20cumple%20de%20Iglenis!%20🥑🎾', '_blank');
+                }, 500);
+            });
+            
+            createDecorations();
+        });
+    </script>
+</body>
+</html>
